@@ -11,25 +11,25 @@ namespace Takrorla
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter Number  : ");
-            int input = int.Parse(Console.ReadLine());
+            Console.Write("Enter Number : ");
+            int n = int.Parse(Console.ReadLine());
 
-            Console.Write("Sum : " + Sum(input));
-
-            Console.ReadLine();
-
-        }
-        public static int Sum(int a)
-        {
-            int sum = 0;
-
-            while (a > 0)
+            for (int i = 1; i <= n; i++)
             {
-                sum += a % 10;
-                a /= 10;
+                if (i % 5 == 0 && i % 3 == 0)
+                {
+                    Console.WriteLine(i + "foo bar");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine(i + " foo");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine(i + " bar");
+                }
             }
-
-            return sum;
+            Console.ReadLine();
         }
     }
 }
